@@ -17,16 +17,6 @@ void loop()
 {
   delay(2);
   printSBUSStatus();
-  /* 
-   PB1=1
-   PB0=2
-   PA7=3
-   PA6=4
-   PA3=5; RX1
-   PA2=6; TX1
-   PA1=7
-   PA0=8
-   */
   s1.attach(PB1);// S1 = Channel_1; PB1 = Pinout_1
   s2.attach(PB0);
   s3.attach(PA7);
