@@ -21,7 +21,7 @@ void SBUS::process() {
   
 	static byte buffer[22];
 	static byte buffer_index = 0;
-
+	
 	while (_serial.available()) {//Reads in from USART
     
 		byte rx = _serial.read();
@@ -68,9 +68,8 @@ void SBUS::process() {
 int SBUS::getNormalizedChannel(int channel) {
 	if (channel < 1 or channel > 18) {
 		return 0;
-	} else {
+	} else 
 		return (int) lround(0.62477120195241f * (_channels[channel - 1]) + 881) ; //outputs 995-2012 pwm
-	}
 }
 
 /*
