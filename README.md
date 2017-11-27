@@ -1,5 +1,5 @@
 # SBUS_explore
-This is an SBUS to PWM converter based on the STM32F1 Series Chips. 
+This is an SBUS to PWM converter based on the STM32F1 Series Chips using Arduino IDE to flash. 
 
 It is setup to use 8 outputs but can increased as desired up to 15.
 
@@ -22,4 +22,8 @@ Channel_7 = PA1   Pin - 11
 Channel_8 = PA0   Pin - 10
 
 Serial Channel 2 is the input. Pin 22 at 100000 BAUD
+
+Serial outputs are in the code for testing at 115200 BAUD
+
+
 
