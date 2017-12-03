@@ -10,13 +10,6 @@ void setup()
   Serial.begin(115200);
   pinMode(PC13, OUTPUT);//LED
   digitalWrite(PC13, LOW); //Pull Down LED
- 
-}
-
-void loop()
-{
-  delay(2);
-  printSBUSStatus();
   s1.attach(PB1);// S1 = Channel_1; PB1 = Pinout_1
   s2.attach(PB0);
   s3.attach(PA7);
@@ -25,6 +18,12 @@ void loop()
   s6.attach(PA2);
   s7.attach(PA1);
   s8.attach(PA0);
+}
+
+void loop()
+{
+  delay(2);
+  printSBUSStatus();
   setServo();
   //Serial.println(sbus.getLostFrames());
   //Serial.println(sbus.getLostFrames());
@@ -99,13 +98,13 @@ void printSBUSStatus()
 
 void setServo()
 {
-  s1.write(map(L1, 989, 2012, 25, 120));//Servo 1 is connected to Long 1. Lowest is 989; Highest is 2012; Start/Stop positions
-  s2.write(map(L2, 989, 2012, 25, 120));
-  s3.write(map(L3, 989, 2012, 25, 120));
-  s4.write(map(L4, 989, 2012, 25, 120));
-  s5.write(map(L5, 989, 2012, 25, 120));
-  s6.write(map(L6, 989, 2012, 25, 120));
-  s7.write(map(L7, 989, 2012, 25, 120));
-  s8.write(map(L8, 989, 2012, 25, 120));
+  s1.write(map(L1, 989, 2012, 0, 179));//Servo 1 is connected to Long 1. Lowest is 989; Highest is 2012; Start/Stop positions
+  s2.write(map(L2, 989, 2012, 0, 179));
+  s3.write(map(L3, 989, 2012, 0, 179));
+  s4.write(map(L4, 989, 2012, 0, 179));
+  s5.write(map(L5, 989, 2012, 0, 179));
+  s6.write(map(L6, 989, 2012, 0, 179));
+  s7.write(map(L7, 989, 2012, 0, 179));
+  s8.write(map(L8, 989, 2012, 0, 179));
 }
 
